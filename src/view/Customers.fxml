@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="989.0" style="-fx-background-color: #778899;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomersDashboard">
+    <children>
+        <RadioButton fx:id="allRadio" layoutX="239.0" layoutY="55.0" mnemonicParsing="false" onAction="#filterCustomers" selected="true" text="All Customers" textFill="#d4d7a0">
+
+        </RadioButton>
+
+
+        <RadioButton fx:id="studentsRadio" layoutX="444.0" layoutY="55.0" mnemonicParsing="false" onAction="#filterCustomers" text="Students" textFill="#d4d7a0">
+
+        </RadioButton>
+
+        <RadioButton fx:id="patientsRadio" layoutX="619.0" layoutY="55.0" mnemonicParsing="false" onAction="#filterCustomers" text="Patients" textFill="#d4d7a0">
+
+        </RadioButton>
+
+
+        <TableView fx:id="tableCustomer" layoutX="34.0" layoutY="87.0" prefHeight="398.0" prefWidth="915.0">
+            <columns>
+                <TableColumn fx:id="CusIdCol" text="ID" />
+                <TableColumn fx:id="cusTypeCol" text="Type" />
+                <TableColumn fx:id="cusNameCol" text="Name" />
+                <TableColumn fx:id="cusAddressCol" text="Address" />
+                <TableColumn fx:id="cusCityCol" text="City" />
+                <TableColumn fx:id="cusCountryCol" text="Country" />
+                <TableColumn fx:id="cusPostalCol" text="Postal Code" />
+                <TableColumn fx:id="cusPhoneCol" text="Phone Number" />
+                <TableColumn fx:id="cusAcademicLevelCol" text="Academic Level" />
+                <TableColumn fx:id="cusCourseCol" text="Course" />
+                <TableColumn fx:id="cusMedicalDeptCol" text="Medical Department" />
+                <TableColumn fx:id="cusMedicalHistoryCol" text="Medical History" />
+
+
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <Label layoutX="399.0" prefHeight="36.0" prefWidth="134.0" text="Customers ">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnSaveCustomer" layoutX="86.0" layoutY="493.0" mnemonicParsing="false" onAction="#onSaveCustomer" style="-fx-background-color: #000FFF;" text="Add" textFill="WHITE" />
+        <Button fx:id="btnUpdateCustomer" layoutX="298.0" layoutY="493.0" mnemonicParsing="false" onAction="#onModifyCustomer" style="-fx-background-color: #000FFF;" text="Update" textFill="WHITE" />
+        <Button fx:id="btnRemoveCustomer" layoutX="483.0" layoutY="493.0" mnemonicParsing="false" onAction="#onRemoveCustomer" style="-fx-background-color: #000FFF;" text="Delete" textFill="WHITE" />
+        <Button fx:id="btnDash" layoutX="767.0" layoutY="489.0" mnemonicParsing="false" onAction="#onDashBoard" style="-fx-background-color: #000FFF;" text="Dashboard" textFill="WHITE" />
+    </children>
+</Pane>

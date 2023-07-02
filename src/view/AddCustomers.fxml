@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="454.0" prefWidth="600.0" style="-fx-background-color: #778899;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateCustomer">
+    <children>
+        <Button fx:id="btnAddCustomer" layoutX="226.0" layoutY="405.0" mnemonicParsing="false" onAction="#onAddCustomer" style="-fx-background-color: #000FFF;" text="Add" textFill="#d4d7a0" />
+        <Button fx:id="btnCancel" layoutX="365.0" layoutY="405.0" mnemonicParsing="false" onAction="#onCancel" style="-fx-background-color: #000FFF;" text="Cancel" textFill="#fffdfd" />
+        <Label layoutX="193.0" layoutY="33.0" prefHeight="30.0" prefWidth="197.0" text="Add Customer Data">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <GridPane fx:id="grid" layoutX="21.0" layoutY="105.0" prefHeight="280.0" prefWidth="512.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints />
+            </rowConstraints>
+            <children>
+                <Label text="Name:" textFill="#d4d7a0" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Address:" textFill="#d4d7a0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="State:" textFill="#d4d7a0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Country:" textFill="#d4d7a0" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Postal Code:" textFill="#d4d7a0" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Phone:" textFill="#d4d7a0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblAcademicLevel" text="Academic Level:" textFill="#d4d7a0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="academicLevelCombo" promptText="Select an Academic Level" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label fx:id="lblCourse" text="Course:" textFill="#d4d7a0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="courseText" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+
+                <Label fx:id="lblMedicalDept" text="Medical Department:" textFill="#d4d7a0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="medicalDeptCombo" promptText="Select a Medical Department" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="lblMedicalHistory" text="Medical History:" textFill="#d4d7a0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="medicalHistoryText" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+
+                <TextField fx:id="nameTxt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="AddressTxt" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <TextField fx:id="PostalTxt" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <TextField fx:id="phoneTxt" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                <ComboBox fx:id="CityCombo" onAction="#onSelectCity" prefWidth="150.0" promptText="Select a State" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Label text="Customer ID:" textFill="#d4d7a0">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="cusIdTxt" disable="true" editable="false" promptText="Auto-Generated" GridPane.columnIndex="1" />
+                <ComboBox fx:id="comboCountry" onAction="#onChooseCountry" prefWidth="150.0" promptText="Select a Country" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label text="Type" textFill="#d4d7a0" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+
+                <ComboBox fx:id="comboType" onAction="#onSelectType" prefWidth="150.0" promptText="Select a Type" GridPane.columnIndex="3" />
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

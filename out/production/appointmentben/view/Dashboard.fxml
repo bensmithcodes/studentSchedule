@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="656.0" style="-fx-background-color: 778899;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Dashboard">
+   <children>
+      <Button fx:id="logoutBtn" layoutX="152.0" layoutY="336.0" mnemonicParsing="false" onAction="#onClickLogOut" style="-fx-background-color: #0000FF;" text="Logout" textFill="#f8f5f5" />
+      <Button fx:id="exitBtn" layoutX="405.0" layoutY="336.0" mnemonicParsing="false" onAction="#onExit" style="-fx-background-color: #0000FF;" text="Exit" textFill="#f8f5f5" />
+      <VBox alignment="CENTER" layoutX="24.0" layoutY="150.0" prefHeight="137.0" prefWidth="200.0" />
+      <VBox alignment="CENTER" layoutX="214.0" layoutY="82.0" prefHeight="137.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="customersBtn" mnemonicParsing="false" onAction="#onClickCustomers" style="-fx-background-color: #0000FF;" text="Customers Screen" textFill="#f8f5f5" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="433.0" layoutY="87.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="appointmentsBtn" layoutX="263.0" layoutY="206.0" mnemonicParsing="false" onAction="#onClickAppointments" style="-fx-background-color: #0000FF;" text="Appointments Screen" textFill="#f8f5f5" />
+      <Label layoutX="206.0" layoutY="7.0" prefHeight="64.0" prefWidth="216.0" text="DashBoard">
+         <font>
+            <Font size="43.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.5681818633368522" startY="0.405303059202252">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="reportsBtn" layoutX="276.0" layoutY="269.0" mnemonicParsing="false" onAction="#onClickReports" style="-fx-background-color: #0000FF;" text="Reports Screen" textFill="#f8f5f5" />
+   </children>
+</Pane>

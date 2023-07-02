@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="992.0" style="-fx-background-color: #778899;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentsDashboard">
+    <children>
+        <TableView fx:id="apTbl" layoutX="14.0" layoutY="112.0" prefHeight="353.0" prefWidth="972.0" style="-fx-backgroud-color: grey;">
+            <columns>
+                <TableColumn fx:id="apIdCol" prefWidth="118.0" text="Appointment_ID" />
+                <TableColumn fx:id="apTitCol" prefWidth="54.0" text="Title" />
+                <TableColumn fx:id="apDescCol" prefWidth="107.0" text="Description" />
+                <TableColumn fx:id="apLocCol" prefWidth="68.0" text="Location" />
+                <TableColumn fx:id="apContactCol" minWidth="5.0" prefWidth="104.0" text="Contact" />
+                <TableColumn fx:id="apTypeCol" minWidth="7.0" prefWidth="96.0" text="Type" />
+                <TableColumn fx:id="apStartTimeCol" prefWidth="130.0" text="Start" />
+                <TableColumn fx:id="apEndTimeCol" prefWidth="136.0" text="End" />
+                <TableColumn fx:id="apCustomerIdCol" prefWidth="88.0" text="Customer_ID" />
+                <TableColumn fx:id="apUserIdCol" prefWidth="70.0" text="User_ID" />
+            </columns>
+        </TableView>
+        <Label layoutX="376.0" layoutY="14.0" prefHeight="32.0" prefWidth="203.0" text="Appointments ">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="55.0" text="Select a filter to view the calender:" textFill="#d4d7a0" />
+        <Label layoutX="14.0" layoutY="83.0" text="NOTE: All appointments are shown by default. Use radio buttons to filter table below." textFill="#ff1616" />
+        <RadioButton fx:id="allRadio" layoutX="239.0" layoutY="55.0" mnemonicParsing="false" onAction="#searchAppointments" selected="true" text="All Appointments" textFill="#d4d7a0">
+
+        </RadioButton>
+
+
+        <RadioButton fx:id="weekRadio" layoutX="444.0" layoutY="55.0" mnemonicParsing="false" onAction="#searchAppointments" text="Appointments this week" textFill="#d4d7a0">
+
+        </RadioButton>
+
+        <RadioButton fx:id="monRadio" layoutX="619.0" layoutY="55.0" mnemonicParsing="false" onAction="#searchAppointments" text="Appointments this month" textFill="#d4d7a0">
+
+        </RadioButton>
+        <Button fx:id="btnDash" layoutX="791.0" layoutY="482.0" mnemonicParsing="false" onAction="#onDashboard" style="-fx-background-color: #000fff;" text="DashBoard" textFill="WHITE" />
+        <Button fx:id="btncreateApp" layoutX="85.0" layoutY="495.0" mnemonicParsing="false" onAction="#onScheduleAppointment" style="-fx-background-color: #0000FF;" text="Add" textFill="#fffdfd" />
+        <Button fx:id="btnremoveApp" layoutX="339.0" layoutY="494.0" mnemonicParsing="false" onAction="#onDeleteAppointment" style="-fx-background-color: #0000FF;" text="Delete" textFill="#fffdfd" />
+        <Button fx:id="btnModifyApp" layoutX="195.0" layoutY="495.0" mnemonicParsing="false" onAction="#onUpdateAppointment" style="-fx-background-color: #0000FF;" text="Update" textFill="#fffdfd" />
+
+    </children>
+</Pane>
